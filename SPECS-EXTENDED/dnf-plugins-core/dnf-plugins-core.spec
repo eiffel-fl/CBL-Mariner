@@ -11,11 +11,11 @@ Distribution:   Mariner
 
 Name:           dnf-plugins-core
 Version:        4.0.18
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Core Plugins for DNF
 License:        GPLv2+
 URL:            https://github.com/rpm-software-management/dnf-plugins-core
-Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  cmake
 BuildRequires:  gettext
@@ -68,7 +68,7 @@ Summary:    Core Plugins for DNF
 %{?python_provide:%python_provide python3-%{name}}
 BuildRequires:  python3-devel
 BuildRequires:  python3-dnf >= %{dnf_lowest_compatible}
-BuildRequires:  python3-nose
+BuildRequires:  python3-nose2
 
 Requires:       python3-distro
 
@@ -399,6 +399,9 @@ PYTHONPATH=./plugins nosetests-%{python3_version} -s tests/
 %endif
 
 %changelog
+* Wed Jan 5 2022 Cameron Baird <cameronbaird@microsoft.com>  - 4.0.18-5
+- upgrade to undeprecated python3-nose2
+
 * Tue Aug 10 2021 Thomas Crain <thcrain@microsoft.com>  - 4.0.18-4
 - Remove python2 support, distro-specific checks
 
