@@ -210,6 +210,7 @@
                 "pyelftools",
                 "python-async-generator",
                 "python-conda-package-handling",
+                "python-cov-core",
                 "python-cpuinfo",
                 "python-cytoolz",
                 "python-fields",
@@ -972,6 +973,23 @@
             "license": "[LGPLv2 License](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt)",
             "specs": [
                 "numad"
+            ]
+        },
+        {
+            "origin": "Mock source",
+            "license": "[GPLv2+ License](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)",
+            "specs": [
+                "mock-core-configs",
+                "dnf-plugins-core",
+                "python-pyroute2",
+                "python-templated-dictionary"
+            ]
+        },
+        {
+            "origin": "python-nose2 source",
+            "license": "[BSD License](https://opensource.org/licenses/BSD-3-Clause)",
+            "specs": [
+                "python-nose2"
             ]
         }
     ]
